@@ -43,6 +43,53 @@ header h2 {
 .shadow {
   text-shadow: 2px 2px #800000;
 }
+/*navigation styles*/
+
+#nav_menu ul {
+  list-style-type: none;
+  position: relative;
+}
+
+#nav_menu ul li {
+  float: left;
+}
+
+#nav_menu ul li a.current {
+  color: yellow;
+}
+
+#nav_menu ul li a {
+  display: block;
+  width: 160px;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  background-color: #800000;
+  color: white;
+  font-weight: bold;
+}
+
+#nav_menu ul li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  clear: both;
+}
+
+#nav_menu ul li:hover > ul {
+  display: block;
+}
+
+#nav_menu ul li:focus > ul {
+  display: block;
+}
+
+#nav_menu > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 /* the styles for the section */
 main {
@@ -105,6 +152,7 @@ main section blockquote {
 main section ul {
   padding-bottom: .25em;
   padding-left: 1.25em;
+  list-style-type: circle;
 }
 
 section {
